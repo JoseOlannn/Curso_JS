@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Caja de Comentarios - Actividad 6 del Curso de JavaScript DevF">
+  <title>Caja de Comentarios | Actividad 6</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">
+          <span class="logo-icon">💬</span>
+          <h1>Caja de Comentarios</h1>
+        </div>
+        <p class="subtitle">Comparte tus pensamientos con la comunidad</p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Comment Form -->
+      <section class="comment-form-section">
+        <div class="form-card">
+          <h2 class="form-title">Nuevo Comentario</h2>
+          <form id="comment-form">
+            <div class="form-group">
+              <label for="comment-author">Tu nombre</label>
+              <input 
+                type="text" 
+                id="comment-author" 
+                placeholder="Escribe tu nombre..."
+                required
+              >
+            </div>
+            <div class="form-group">
+              <label for="comment-text">Tu comentario</label>
+              <textarea 
+                id="comment-text" 
+                placeholder="¿Qué estás pensando?"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" id="submit-btn" class="btn-submit">
+              <span class="btn-icon">✏️</span>
+              Publicar Comentario
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Comments List -->
+      <section class="comments-section">
+        <div class="comments-header">
+          <h2 class="comments-title">Comentarios</h2>
+          <span class="comments-count" id="comments-count">0 comentarios</span>
+        </div>
+        <div class="comments-list" id="comments-list">
+          <div class="empty-state" id="empty-state">
+            <span class="empty-icon">📭</span>
+            <p>No hay comentarios aún.</p>
+            <p class="empty-sub">¡Sé el primero en comentar!</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Actividad 6 - Curso de JavaScript DevF</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

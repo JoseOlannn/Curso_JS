@@ -1,0 +1,378 @@
+/* ============================================
+   Actividad 7: Password Generator - Estilos
+   Basado en el diseño de Frontend Mentor
+   ============================================ */
+
+/* --- Variables CSS --- */
+:root {
+  --dark-bg: #18171f;
+  --card-bg: #24232c;
+  --display-bg: #24232c;
+  --text-primary: #e6e5ea;
+  --text-secondary: #817d92;
+  --accent-green: #a4ffaf;
+  --accent-yellow: #f8cd65;
+  --accent-orange: #fb7c58;
+  --accent-red: #f64a4a;
+  --slider-bg: #18171f;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', sans-serif;
+  --border-radius: 8px;
+  --transition: all 0.25s ease;
+}
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--dark-bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- App Wrapper --- */
+.app-wrapper {
+  width: 100%;
+  max-width: 540px;
+}
+
+/* --- Title --- */
+.app-title {
+  text-align: center;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+
+/* --- Password Display --- */
+.password-display {
+  background: var(--display-bg);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  border-radius: var(--border-radius);
+}
+
+.password-text {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  user-select: all;
+}
+
+.password-text.placeholder {
+  color: var(--text-secondary);
+}
+
+.btn-copy {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.btn-copy:hover .copy-icon path {
+  fill: var(--text-primary);
+}
+
+.copy-label {
+  color: var(--accent-green);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.copy-label.visible {
+  opacity: 1;
+}
+
+/* --- Generator Card --- */
+.generator-card {
+  background: var(--card-bg);
+  padding: 28px 32px 32px;
+  border-radius: var(--border-radius);
+}
+
+/* --- Character Length Section --- */
+.length-section {
+  margin-bottom: 28px;
+}
+
+.length-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.length-header label {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.length-value {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-green);
+}
+
+/* --- Custom Range Slider --- */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: var(--slider-bg);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  cursor: pointer;
+  border: 2px solid var(--text-primary);
+  transition: var(--transition);
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: var(--dark-bg);
+  border-color: var(--accent-green);
+}
+
+.slider::-webkit-slider-thumb:active {
+  background: var(--dark-bg);
+  border-color: var(--accent-green);
+}
+
+.slider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  cursor: pointer;
+  border: 2px solid var(--text-primary);
+  transition: var(--transition);
+}
+
+.slider::-moz-range-thumb:hover {
+  background: var(--dark-bg);
+  border-color: var(--accent-green);
+}
+
+/* --- Options Section --- */
+.options-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+/* --- Custom Checkbox --- */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  user-select: none;
+  transition: var(--transition);
+}
+
+.checkbox-label:hover {
+  color: var(--accent-green);
+}
+
+.checkbox-label input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--text-primary);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .custom-checkbox {
+  background: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .custom-checkbox::after {
+  content: '✓';
+  color: var(--dark-bg);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.checkbox-label:hover .custom-checkbox {
+  border-color: var(--accent-green);
+}
+
+/* --- Strength Section --- */
+.strength-section {
+  background: var(--dark-bg);
+  padding: 16px 24px;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.strength-label {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.strength-indicator {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.strength-text {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+}
+
+.strength-bars {
+  display: flex;
+  gap: 6px;
+}
+
+.bar {
+  width: 10px;
+  height: 28px;
+  border: 2px solid var(--text-primary);
+  border-radius: 1px;
+  transition: var(--transition);
+}
+
+/* Strength levels */
+.bar.too-weak {
+  background: var(--accent-red);
+  border-color: var(--accent-red);
+}
+
+.bar.weak {
+  background: var(--accent-orange);
+  border-color: var(--accent-orange);
+}
+
+.bar.medium {
+  background: var(--accent-yellow);
+  border-color: var(--accent-yellow);
+}
+
+.bar.strong {
+  background: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
+/* --- Generate Button --- */
+.btn-generate {
+  width: 100%;
+  padding: 18px 24px;
+  background: var(--accent-green);
+  color: var(--dark-bg);
+  border: 2px solid var(--accent-green);
+  border-radius: var(--border-radius);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  letter-spacing: 0.08em;
+}
+
+.btn-generate:hover {
+  background: transparent;
+  color: var(--accent-green);
+}
+
+.btn-generate:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+.arrow-icon {
+  transition: transform 0.25s ease;
+}
+
+/* --- Responsive --- */
+@media (max-width: 540px) {
+  .generator-card {
+    padding: 20px;
+  }
+
+  .password-text {
+    font-size: 1.4rem;
+  }
+
+  .length-value {
+    font-size: 1.4rem;
+  }
+
+  .strength-section {
+    padding: 14px 16px;
+  }
+
+  .strength-text {
+    font-size: 0.9rem;
+  }
+}

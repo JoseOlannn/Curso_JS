@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Generador de Contraseñas Seguras - Actividad 7 del Curso de JavaScript DevF">
+  <title>Password Generator | Actividad 7</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    <!-- Title -->
+    <h1 class="app-title">Password Generator</h1>
+
+    <!-- Password Display -->
+    <div class="password-display" id="password-display">
+      <span class="password-text" id="password-text">PTx1f5DaFX</span>
+      <button class="btn-copy" id="btn-copy" title="Copiar contraseña">
+        <svg class="copy-icon" width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.909 0.659H5.681a1.137 1.137 0 0 0-1.136 1.137v1.708h-3.41A1.137 1.137 0 0 0 0 4.64v17.046a1.137 1.137 0 0 0 1.136 1.136h12.228a1.137 1.137 0 0 0 1.136-1.136v-1.709h3.409a1.137 1.137 0 0 0 1.136-1.136V1.796A1.137 1.137 0 0 0 17.91.659ZM13.364 21.686H1.136V4.641h3.41v14.2a1.137 1.137 0 0 0 1.135 1.136h7.683v1.709ZM17.91 18.84H5.68V1.796h12.228V18.84Z" fill="#A4FFAF"/>
+        </svg>
+        <span class="copy-label" id="copy-label">COPIED</span>
+      </button>
+    </div>
+
+    <!-- Generator Card -->
+    <div class="generator-card">
+      <!-- Character Length Slider -->
+      <div class="length-section">
+        <div class="length-header">
+          <label for="char-length">Character Length</label>
+          <span class="length-value" id="length-value">10</span>
+        </div>
+        <input 
+          type="range" 
+          id="char-length" 
+          class="slider" 
+          min="1" 
+          max="20" 
+          value="10"
+        >
+      </div>
+
+      <!-- Options -->
+      <div class="options-section">
+        <label class="checkbox-label" for="include-uppercase">
+          <input type="checkbox" id="include-uppercase" checked>
+          <span class="custom-checkbox"></span>
+          Include Uppercase Letters
+        </label>
+
+        <label class="checkbox-label" for="include-lowercase">
+          <input type="checkbox" id="include-lowercase" checked>
+          <span class="custom-checkbox"></span>
+          Include Lowercase Letters
+        </label>
+
+        <label class="checkbox-label" for="include-numbers">
+          <input type="checkbox" id="include-numbers" checked>
+          <span class="custom-checkbox"></span>
+          Include Numbers
+        </label>
+
+        <label class="checkbox-label" for="include-symbols">
+          <input type="checkbox" id="include-symbols">
+          <span class="custom-checkbox"></span>
+          Include Symbols
+        </label>
+      </div>
+
+      <!-- Strength Indicator -->
+      <div class="strength-section">
+        <span class="strength-label">STRENGTH</span>
+        <div class="strength-indicator">
+          <span class="strength-text" id="strength-text">MEDIUM</span>
+          <div class="strength-bars" id="strength-bars">
+            <div class="bar active"></div>
+            <div class="bar active"></div>
+            <div class="bar active"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Generate Button -->
+      <button class="btn-generate" id="btn-generate">
+        GENERATE
+        <svg class="arrow-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.106 12L11.106 6L5.106 0" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

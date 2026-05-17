@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Seguimiento de Libros con Comentarios - Actividad 8 del Curso de JavaScript DevF">
+  <title>Seguimiento de Libros | Actividad 8</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <span class="header-icon">📚</span>
+        <div>
+          <h1>Seguimiento de Libros</h1>
+          <p class="header-sub">Organiza tu biblioteca personal y comparte reseñas</p>
+        </div>
+      </div>
+      <div class="stats-bar">
+        <div class="stat">
+          <span class="stat-number" id="total-books">0</span>
+          <span class="stat-label">Libros</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" id="total-comments">0</span>
+          <span class="stat-label">Comentarios</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Add Book Form -->
+      <section class="section-card add-book-section">
+        <h2 class="section-title">📖 Agregar Libro</h2>
+        <form id="book-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="book-title">Título del libro</label>
+              <input type="text" id="book-title" placeholder="Ej: Cien Años de Soledad" required>
+            </div>
+            <div class="form-group">
+              <label for="book-author">Autor</label>
+              <input type="text" id="book-author" placeholder="Ej: Gabriel García Márquez" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group form-group-small">
+              <label for="book-year">Año</label>
+              <input type="number" id="book-year" placeholder="1967" min="1000" max="2030">
+            </div>
+            <div class="form-group form-group-small">
+              <label for="book-status">Estado</label>
+              <select id="book-status">
+                <option value="leido">📗 Leído</option>
+                <option value="leyendo">📖 Leyendo</option>
+                <option value="pendiente">📕 Pendiente</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary" id="add-book-btn">
+            ➕ Agregar Libro
+          </button>
+        </form>
+      </section>
+
+      <!-- Books List -->
+      <section class="section-card">
+        <h2 class="section-title">📚 Mi Biblioteca</h2>
+        <div class="books-list" id="books-list">
+          <div class="empty-state" id="empty-books">
+            <span class="empty-icon">📚</span>
+            <p>Tu biblioteca está vacía</p>
+            <p class="empty-sub">Agrega tu primer libro arriba</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Actividad 8 - Curso de JavaScript DevF</p>
+    </footer>
+  </div>
+
+  <!-- Comment Modal -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="comment-modal">
+      <div class="modal-header">
+        <h3 id="modal-book-title">Comentarios</h3>
+        <button class="btn-close-modal" id="btn-close-modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <!-- Comment Form -->
+        <form id="comment-form" class="comment-form">
+          <div class="form-group">
+            <textarea id="comment-text" placeholder="Escribe tu comentario sobre este libro..." rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn-comment-submit">💬 Publicar Comentario</button>
+        </form>
+        <!-- Comments List -->
+        <div class="modal-comments" id="modal-comments">
+          <div class="empty-state small" id="empty-comments">
+            <p>No hay comentarios aún</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
