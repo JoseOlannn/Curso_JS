@@ -28,11 +28,34 @@ Este repositorio contiene las actividades y ejercicios del curso de JavaScript i
 | `Modulo 2/actividad7.js` | Buscar el máximo (Divide and Conquer) |
 | `Modulo 2/actividad8/` | Gestor de notas (Módulo `fs` de Node.js) |
 
+### Módulo de React: Ejercicios de `useState` y `useEffect`
+| Carpeta/Proyecto | Descripción |
+|------------------|-------------|
+| `ejercicios-react/` | Aplicación con múltiples componentes que demuestran el uso de los hooks `useState` y `useEffect` en React. |
+
+#### Cómo ejecutar el proyecto de React
+1. Abre tu terminal.
+2. Navega a la carpeta del proyecto:
+   ```bash
+   cd ejercicios-react
+   ```
+3. Instala las dependencias (si no lo has hecho):
+   ```bash
+   npm install
+   ```
+4. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+5. Abre en tu navegador la dirección `http://localhost:5173`.
+
 ## Tecnologías
 
 - JavaScript (ES6+)
 - HTML5
 - CSS3
+- React
+- Vite
 
 ## Autor
 
