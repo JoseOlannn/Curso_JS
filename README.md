@@ -32,6 +32,7 @@ Este repositorio contiene las actividades y ejercicios del curso de JavaScript i
 | Carpeta/Proyecto | Descripción |
 |------------------|-------------|
 | `ejercicios-react/` | Aplicación con múltiples componentes que demuestran el uso de los hooks `useState` y `useEffect` en React. |
+| `formulario-registro/` | Formulario de registro con React y peticiones HTTP. |
 
 #### Cómo ejecutar el proyecto de React
 1. Abre tu terminal.
@@ -48,6 +49,15 @@ Este repositorio contiene las actividades y ejercicios del curso de JavaScript i
    npm run dev
    ```
 5. Abre en tu navegador la dirección `http://localhost:5173`.
+
+### Carpeta 5: Proyecto FrontEnd Avanzado y Backend con Express (DevfSeek)
+| Carpeta/Proyecto | Descripción |
+|------------------|-------------|
+| `carpeta 5/1-frontend-tailwind-hookform/` | Parte 1: Integración de Tailwind CSS y validación con React Hook Form & Zod. |
+| `carpeta 5/2-ollama-chat-history/` | Parte 2: Clon básico de ChatGPT/DevSeek con Custom Hook de Ollama y componente History. |
+| `carpeta 5/3-usecontext-global-state/` | Parte 3: Estado global con `createContext`, `GlobalProvider` y `useContext`. |
+| `carpeta 5/4-servidor-express/` | Parte 4: Servidor Express básico con endpoint 'Hola Mundo', API REST y pruebas automáticas. |
+| `carpeta 5/proyecto-devfseek-completo/` | Proyecto Full-Stack integrado con React 19, Tailwind CSS, Context API y servidor Express. |
 
 ## Tecnologías
 
